@@ -19,8 +19,8 @@ text второстепенный #000000 черный
   --hero-bgc-color: #2f303a;
   --section-bgc-color: #f5f4fa;
   --border-header: #ececec;
-  --border-cards-product: #EEEEEE;
-  --social-link-color:#AFB1B8;
+  --border-cards-product: #eeeeee;
+  --social-link-color: #afb1b8;
 }
 body {
   background-color: var(--footer-text-logo-color);
@@ -59,6 +59,7 @@ html {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  
 }
 .navigation {
   display: flex;
@@ -147,9 +148,8 @@ html {
 
 .contact:hover .icon-contact,
 .contact:focus .icon-contact {
- fill: var(--prime-text-logo-color);
+  fill: var(--prime-text-logo-color);
 }
- 
 
 .hero-section {
   background-color: var(--hero-bgc-color);
@@ -157,7 +157,8 @@ html {
   width: 1600px;
   margin: 0 auto;
   padding: 200px 15px;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero.jpg);
 }
 .container-hero {
   width: 1200px;
@@ -294,9 +295,10 @@ html {
   text-align: center;
 }
 .cards {
-padding: 30px 30px;
-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
+  padding: 30px 30px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .text-cards {
   color: var(--prime-text-color);
@@ -307,27 +309,94 @@ border-radius: 0px 0px 4px 4px;
   margin-top: 10px;
 }
 .social-link {
-list-style: none;
-display: flex;
-justify-content: center;
-gap: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  
 }
 .link-cards {
-  background-color: var(--footer-text-logo-color);
-width: 44px;
-height: 44px;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 16px;
+ background-color: var(--footer-text-logo-color);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  border-radius: 50%;
+}
+.link-cards:hover, 
+.link-cards:focus {
+  background-color: var(--prime-text-logo-color);
+}
+.color-link {
+  fill: var(--social-link-color);
+}
+.team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.link-cards:hover .color-link,
+.link-cards:focus .color-link{
+fill: var(--footer-text-logo-color);
+}
+
+.clients-section {
+  background-color: var(--prime-bgc-color);
+}
+.clients-container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin: 0 auto;
+}
+.clients {
+   color: var(--text-nav-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+.link-company {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.company {
+  background-color: var(--footer-text-logo-color);
+  width: 170px;
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  border: 1px solid var(--social-link-color);
+  border-radius: 4px;
+}
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+.company:hover,
+.company:focus {
+  border: 1px solid var(--prime-text-logo-color);
+}
+.company:hover .color-link,
+.company:focus .color-link {
+ fill: var(--prime-text-logo-color);
+}
 
 .footer-section {
   background-color: var(--hero-bgc-color);
   padding-top: 60px;
   padding-bottom: 60px;
-  
 }
 .third-logo {
   color: var(--footer-text-logo-color);
@@ -351,6 +420,29 @@ margin-top: 16px;
 .link:hover,
 .link:focus {
   color: var(--prime-text-logo-color);
+}
+ 
+.footer-social-text {
+  color: var(--footer-text-logo-color);
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+}
+footer .container {
+  display: flex;
+  gap: 70px;
+}
+
+.social-footer {
+margin-top: 10px;
+}
+footer .link-cards {
+  background-color:  rgba(255, 255, 255, 0.1);
+}
+footer .color-link {
+  fill: var(--footer-text-logo-color);
 }
 
 .main {
@@ -408,8 +500,14 @@ margin-top: 16px;
   gap: 30px;
 }
 .products-items {
-  max-width: 370px ;
-  flex-basis: calc((100%-60px)/3);
+  max-width: 370px;
+  flex-basis: calc((100%-60px) / 3);
+  
+}
+.products-items:hover,
+.products-items:focus {
+  border: 1px solid var(--border-cards-product);
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .project-contents {
   padding: 20px 24px;
